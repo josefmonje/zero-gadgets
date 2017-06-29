@@ -1,0 +1,32 @@
+#!/bin/bash
+
+GADGET_NAME="RaspberyPiZeroW"
+
+USB_GADGETS=/sys/kernel/config/usb_gadget
+GADGET=$USB_GADGETS/$GADGET_NAME
+
+mkdir -p $GADGET
+echo 0x1d6b > $GADGET/idVendor # Linux Foundation
+echo 0x0104 > $GADGET/idProduct # Multifunction Composite Gadget
+echo 0x0100 > $GADFET/bcdDevice # v1.0.0
+echo 0x0200 > $GADGET/bcdUSB # USB2
+
+mkdir -p $GADGET/strings/0x409
+echo "0000000000000000" > $GADGET/strings/0x409/serialnumber
+echo "Josef Monje" > $GADGET/strings/0x409/manufacturer
+echo $GADGET_NAME > $GADGET/strings/0x409/product
+
+mkdir -p $GADGET/configs/c.1/strings/0x409
+echo "Config 1: ECM network" > $GADGET/configs/c.1/strings/0x409/configuration
+echo 250 > $GADGET/configs/c.1/MaxPower
+
+# Functions
+source /home/pi/gadgets/g_ethernet
+source /home/pi/gadgets/g_mass_storage
+source /home/pi/gadgets/g_serial
+#source /home/pi/gadgets/g_keyboard
+
+ls /sys/class/udc > $GADGET/UDC
+
+# For serial
+systemctl enable getty@ttyGS0.service

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+dd if=/dev/zero of=disk.img bs=1024 count=5120
+mkdosfs disk.img

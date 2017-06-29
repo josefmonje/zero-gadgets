@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Serial functions
+mkdir -p $GADGET/functions/acm.usb0
+ln -s $GADGET/functions/acm.usb0 $GADGET/configs/c.1/
