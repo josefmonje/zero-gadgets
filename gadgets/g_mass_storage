@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Mass storage functions
-FILE=/home/pi/gadgets/disk.img
+FILE=/home/pi/zero-gadgets/disk.img
 mkdir -p ${FILE/img/d}
 # mount -o loop,ro,offset=1048576 -t ext4 $FILE ${FILE/img/d} # FOR OLD WAY OF MAKING THE IMAGE
 mount -o loop,ro, -t vfat $FILE ${FILE/img/d} # FOR IMAGE CREATED WITH DD
