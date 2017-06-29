@@ -21,10 +21,10 @@ echo "Config 1: ECM network" > $GADGET/configs/c.1/strings/0x409/configuration
 echo 250 > $GADGET/configs/c.1/MaxPower
 
 # Functions
-source /home/pi/gadgets/g_ethernet
-source /home/pi/gadgets/g_mass_storage
-source /home/pi/gadgets/g_serial
-#source /home/pi/gadgets/g_keyboard
+source /home/pi/zero-gadgets/gadgets/g_ethernet
+source /home/pi/zero-gadgets/gadgets/g_mass_storage
+source /home/pi/zero-gadgets/gadgets/g_serial
+#source /home/pi/zero-gadgets/gadgets/g_keyboard
 
 ls /sys/class/udc > $GADGET/UDC
 
