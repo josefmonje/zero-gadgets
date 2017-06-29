@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# Kernel 4.9.x crash using USB composite gadget HID function
+# https://github.com/raspberrypi/linux/issues/1943
+#
 
 # Keyboard functions
 mkdir -p $GADGET/functions/hid.usb0
