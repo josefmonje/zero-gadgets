@@ -2,6 +2,7 @@
 
 # Webcam functions
 mkdir -p $GADGET/functions/uvc.usb0/streaming/uncompressed/u/360p
+echo 2048 > $GADGET/functions/uvc.usb0/streaming_maxpacket
 cat << EOF > $GADGET/functions/uvc.usb0/streaming/uncompressed/u/360p/dwFrameInterval
 666666
 1000000
@@ -19,5 +20,4 @@ mkdir -p $GADGET/functions/uvc.usb0/control/class/ss
 ln -s $GADGET/functions/uvc.usb0/control/header/h $GADGET/functions/uvc.usb0/control/class/fs
 ln -s $GADGET/functions/uvc.usb0/control/header/h $GADGET/functions/uvc.usb0/control/class/ss
 
-echo 2048 > $GADGET/functions/uvc.usb0/streaming_maxpacket
 ln -s $GADGET/functions/uvc.usb0 $GADGET/configs/c.1/
