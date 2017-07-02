@@ -24,6 +24,7 @@ echo 250 > $GADGET/configs/c.1/MaxPower
 source /home/pi/zero-gadgets/gadgets/g_ethernet
 source /home/pi/zero-gadgets/gadgets/g_mass_storage
 source /home/pi/zero-gadgets/gadgets/g_serial
+#source /home/pi/zero-gadgets/gadgets/g_webcam
 #source /home/pi/zero-gadgets/gadgets/g_keyboard
 
 ls /sys/class/udc > $GADGET/UDC
