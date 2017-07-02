@@ -19,5 +19,5 @@ mkdir -p $GADGET/functions/uvc.usb0/control/class/ss
 ln -s $GADGET/functions/uvc.usb0/control/header/h $GADGET/functions/uvc.usb0/control/class/fs
 ln -s $GADGET/functions/uvc.usb0/control/header/h $GADGET/functions/uvc.usb0/control/class/ss
 
-echo 2048 > functions/uvc.usb0/streaming_maxpacket
+echo 2048 > $GADGET/functions/uvc.usb0/streaming_maxpacket
 ln -s $GADGET/functions/uvc.usb0 $GADGET/configs/c.1/
