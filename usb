@@ -12,7 +12,7 @@ GADGET=$USB_GADGETS/$GADGET_NAME
 mkdir -p $GADGET
 echo 0x1d6b > $GADGET/idVendor # Linux Foundation
 echo 0x0104 > $GADGET/idProduct # Multifunction Composite Gadget
-echo 0x0100 > $GADFET/bcdDevice # v1.0.0
+echo 0x0100 > $GADGET/bcdDevice # v1.0.0
 echo 0x0200 > $GADGET/bcdUSB # USB2
 
 mkdir -p $GADGET/strings/0x409
