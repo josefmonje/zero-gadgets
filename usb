@@ -21,7 +21,7 @@ echo "Josef Monje" > $GADGET/strings/0x409/manufacturer
 echo $GADGET_NAME > $GADGET/strings/0x409/product
 
 mkdir -p $GADGET/configs/c.1/strings/0x409
-echo "Config 1: ECM network" > $GADGET/configs/c.1/strings/0x409/configuration
+echo $GADGET_NAME > $GADGET/configs/c.1/strings/0x409/configuration
 echo 250 > $GADGET/configs/c.1/MaxPower
 
 # Functions
